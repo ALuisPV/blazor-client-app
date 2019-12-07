@@ -1,0 +1,17 @@
+﻿@using BlazorClientDemoApp.Pages.CounterPage.Components
+@page "/counter"
+
+<Header />
+
+<CurrentCount currentCount=currentCount />
+
+<button class="btn btn-primary" @onclick="IncrementCount">Click me</button>
+
+@code {
+    private int currentCount = 0;
+
+    private void IncrementCount()
+    {
+        currentCount++;
+    }
+}
